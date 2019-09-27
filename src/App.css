@@ -1,0 +1,77 @@
+.App {
+  text-align: center;
+}
+
+p, input {
+  margin: 0;
+  padding: 0;
+}
+
+.inputField {
+  outline: none;
+  border: none;
+  border-bottom: 2px solid black;
+  font-size: 18px;
+}
+
+.taskWrapper {
+  display: flex;
+  padding: 40px 20px;
+  background: #f9f9f9;
+}
+
+.taskListItem {
+  margin: 5px 0;
+  background: #f9f9f9;
+  padding: 20px;
+  border-bottom: 1px solid #d3d3d3;
+  display: flex;
+}
+
+.checkboxWrapper {
+  width: 30px;
+  height: 30px;
+  color: #40a9ff;
+}
+
+.svgContainer {
+  cursor: pointer;
+}
+
+.svgInner {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 3px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.textWrapper {
+  font-size: 20px;
+}
+.textWrapper>span {
+  padding: 0 15px;
+}
+
+@keyframes strikethrough{
+  0%   { width : 0; }
+  100% { width: 105%; }
+}
+.strikethrough {
+  position: relative;
+}
+.strikethrough::after {
+  content: ' ';
+  position: absolute;
+  top: 50%;
+  left: -5px;
+  width: 105%;
+  height: 4px;
+  background: #40a9ff;
+  animation-name: strikethrough;
+  animation-duration: .8s;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards; 
+}
+
